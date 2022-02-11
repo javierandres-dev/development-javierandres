@@ -1,18 +1,20 @@
 /* SUMMARY
   0. Imports
   1. Custom properties
-  2. Heading first level
-  3. Header
-  4. Main
-  5. Nav
-  6. Aside
-  7. Footer
-  8. Classes
-  9. Media queries
+  2. Base
+  3. Globals
+  4. Headings
+  5. Text formatting
+  6. Header
+  7. Main
+  8. Aside
+  9. Nav
+  10. Footer
+  11. Media queries
 
   0. IMPORTS
   ============================= */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500&display=swap');
 /* 1. CUSTOM PROPERTIES
   ============================= */
 :root {
@@ -23,15 +25,15 @@
   --c-primary: #0078d7;
   --c-highlight: #00a1f1;
   --ff-base: 'Noto Sans Display', sans-serif;
-  --fw-light: 100;
+  --fw-light: 300;
   --fw-base: 400;
-  --fw-bold: 700;
+  --fw-bold: 500;
   --fs-l: 1.8rem;
   --fs-base: 1.6rem;
   --fs-s: 1.3rem;
   --fs-xs: 1rem;
 }
-/* 1. BASE
+/* 2. BASE
   ============================= */
 html {
   font-size: 62.5%;
@@ -50,27 +52,8 @@ body {
   font-size: var(--fs-base);
   font-weight: var(--fw-base);
   line-height: 1.6;
-  width: 100%;
-  padding: 1rem 2rem;
 }
-h1 {
-  color: var(--c-white);
-  font-size: 1px;
-}
-h2,
-h3 {
-  font-size: var(--fs-l);
-  font-weight: var(--fw-base);
-  text-align: center;
-  text-transform: capitalize;
-}
-small {
-  font-size: var(--fs-xs);
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 a {
   color: var(--c-primary);
 }
@@ -87,7 +70,287 @@ a:hover {
 a:active {
   color: var(--c-highlight);
 }
-/* 2. GLOBALS
+/* 3. GLOBALS
+  ============================= */
+.container-fluid {
+  width: 100%;
+}
+.container {
+  width: 100%;
+}
+.d-none {
+  display: none;
+}
+/* 4. HELADINGS
+  ============================= */
+.title {
+  margin: 0;
+  font-size: 1px;
+  font-weight: var(--fw-light);
+  color: var(--c-white);
+}
+.subtitle {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+.heading {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+}
+/* 5. TEXT FORMATTING
+============================= */
+.foot {
+  font-size: var(--fs-xs);
+}
+/* 6. HEADER
+============================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.brand-logo {
+  width: 6rem;
+}
+.brand-name span {
+  font-size: var(--fs-s);
+}
+.toggle-theme {
+  margin-right: 2rem;
+}
+/* 7. MAIN
+============================= */
+.main {
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+.person {
+  width: 16rem;
+  margin: auto;
+  text-align: center;
+}
+.person-picture {
+  width: 8rem;
+}
+.person-name {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-light);
+}
+/* 8. ASIDE
+  ============================= */
+.details {
+  padding: 0 2rem;
+  font-weight: var(--fw-light);
+}
+.summary {
+  font-weight: var(--fw-bold);
+  color: var(--c-primary);
+}
+/* 9. NAV
+  ============================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 2rem;
+  background-color: var(--c-white);
+}
+.icon {
+  margin: 0;
+  width: 6.4rem;
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+.icon-email {
+  width: 2rem;
+}
+.icon-call {
+  width: 2rem;
+}
+.icon-linkedin {
+  width: 2rem;
+}
+.icon-github {
+  width: 2rem;
+}
+.icon-whatsapp {
+  width: 2rem;
+}
+/* 10. FOOTER
+  ============================= */
+.footer {
+  text-align: end;
+  font-size: var(--fs-s);
+  position: fixed;
+  bottom: 0;
+  background-color: var(--c-white);
+}
+.footer p {
+  margin: 0;
+  padding: 0 2rem;
+}
+/*
+.home {
+  margin: 4rem auto;
+  text-align: center;
+}
+.home figure {
+  width: 10rem;
+  margin: auto;
+}
+.home figure img {
+  border: thin solid var(--white);
+  border-radius: 50%;
+}
+.home figure figcaption {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-xxs);
+  text-align: center;
+}
+.portfolio {
+  margin: 4rem auto;
+  text-align: center;
+}
+.portfolio figure {
+  width: 10rem;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio figure img {
+  border: thin solid var(--white);
+  border-radius: 50%;
+}
+.portfolio figure figcaption {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-xxs);
+  text-align: center;
+}
+.portfolio figure:hover {
+  opacity: 0.7;
+}
+.about {
+  margin: 4rem auto;
+}
+*/
+/* 12. MEDIA QUERIES
+  ============================= */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  .home figure figcaption {
+    font-size: var(--fs-xs);
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .footer p {
+    font-size: var(--fs-s);
+  }
+  .footer small {
+    font-size: var(--fs-xs);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .header figure {
+    width: 22rem;
+  }
+  .header figure img {
+    width: 6rem;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: var(--fs-xl);
+  }
+  .header {
+    padding: 1.5rem;
+  }
+  .home figure figcaption {
+    font-size: var(--fs-s);
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .footer p {
+    font-size: var(--fs-base);
+  }
+  .footer small {
+    font-size: var(--fs-s);
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .navbar {
+    display: block;
+    position: static;
+    z-index: 0;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    overflow-y: auto;
+    background-color: var(--gray);
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+  .navbar__menu-list {
+    list-style: none;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    position: static;
+  }
+  .navbar__menu-list a {
+    display: block;
+    transition: all 0.5s ease;
+    padding: 0.5rem 1rem;
+  }
+  .navbar__menu-list a:hover {
+    background-color: inherit;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .header {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  .header figure {
+    width: 24rem;
+  }
+  .header figure img {
+    width: 8rem;
+  }
+}
+/* ?. THEME
   ============================= */
 .light-mode {
   background-color: var(--white);
@@ -97,43 +360,7 @@ a:active {
   background-color: var(--black);
   color: var(--white);
 }
-/* 3. HELPERS
-  ============================= */
-.d-none {
-  display: none;
-}
-.error {
-  text-align: center;
-  border-bottom: thin solid var(--darkblue);
-  width: 16rem;
-  margin: auto;
-}
-/* 4. HEADER
-  ============================= */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header figure {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-header figure img {
-  width: 8rem;
-}
-header figure figcaption {
-}
-
-main figure {
-  width: 16rem;
-}
-main figure figcaption {
-  font-size: var(--fs-s);
-}
-
-/* 5. THEME BUTTON
+/* ?. THEME BUTTON
   ============================= */
 .btn-theme {
   position: absolute;
@@ -195,7 +422,7 @@ main figure figcaption {
 .btn-theme .btn-theme__cb:not(:checked) + .btn-theme__label .btn-theme__switch {
   transform: translateX(-3.6rem);
 }
-/* 6. MENU BUTTON
+/* ?. MENU BUTTON
   ============================= */
 .btn-menu {
   position: fixed;
@@ -259,7 +486,7 @@ main figure figcaption {
   .btn-menu__menu-line--3 {
   transform: rotate(-45deg) translate3d(0, 0, 0);
 }
-/* 7. NAVIGATION BAR
+/* ?. NAVIGATION BAR
   ============================= */
 .navbar {
   display: block;
@@ -307,177 +534,4 @@ main figure figcaption {
   background-color: var(--blue);
   color: var(--white);
   border-radius: 2rem 0 0 2rem;
-}
-/* 8. HOME
-  ============================= */
-.home {
-  margin: 4rem auto;
-  text-align: center;
-}
-.home figure {
-  width: 10rem;
-  margin: auto;
-}
-.home figure img {
-  border: thin solid var(--white);
-  border-radius: 50%;
-}
-.home figure figcaption {
-  font-weight: var(--fw-light);
-  font-size: var(--fs-xxs);
-  text-align: center;
-}
-/* 9. PORTFOLIO
-  ============================= */
-.portfolio {
-  margin: 4rem auto;
-  text-align: center;
-}
-.portfolio figure {
-  width: 10rem;
-  margin: auto;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio figure img {
-  border: thin solid var(--white);
-  border-radius: 50%;
-}
-.portfolio figure figcaption {
-  font-weight: var(--fw-light);
-  font-size: var(--fs-xxs);
-  text-align: center;
-}
-.portfolio figure:hover {
-  opacity: 0.7;
-}
-/* 10. ABOUT
-  ============================= */
-.about {
-  margin: 4rem auto;
-}
-/* 11. FOOTER
-  ============================= */
-.footer {
-  font-weight: var(--fw-light);
-  text-align: right;
-  padding: 2rem;
-}
-.footer p {
-  font-size: var(--fs-xs);
-  margin: 0;
-}
-.footer small {
-  font-size: var(--fs-xxs);
-}
-/* 12. MEDIA QUERIES
-  ============================= */
-@media screen and (min-width: 576px) {
-  body {
-    max-width: 540px;
-    margin: auto;
-    padding: 1rem 0;
-  }
-  .home figure figcaption {
-    font-size: var(--fs-xs);
-  }
-  .footer {
-    padding: 1rem;
-  }
-  .footer p {
-    font-size: var(--fs-s);
-  }
-  .footer small {
-    font-size: var(--fs-xs);
-  }
-}
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 720px;
-  }
-  .header figure {
-    width: 22rem;
-  }
-  .header figure img {
-    width: 6rem;
-  }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: var(--fs-xl);
-  }
-  .header {
-    padding: 1.5rem;
-  }
-  .home figure figcaption {
-    font-size: var(--fs-s);
-  }
-  .footer {
-    padding: 2rem;
-  }
-  .footer p {
-    font-size: var(--fs-base);
-  }
-  .footer small {
-    font-size: var(--fs-s);
-  }
-}
-@media screen and (min-width: 992px) {
-  body {
-    max-width: 960px;
-  }
-  .btn-menu {
-    display: none;
-  }
-  .navbar {
-    display: block;
-    position: static;
-    z-index: 0;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    overflow-y: auto;
-    background-color: var(--gray);
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0);
-  }
-  .navbar__menu-list {
-    list-style: none;
-    width: inherit;
-    display: flex;
-    flex-direction: row;
-    position: static;
-  }
-  .navbar__menu-list a {
-    display: block;
-    transition: all 0.5s ease;
-    padding: 0.5rem 1rem;
-  }
-  .navbar__menu-list a:hover {
-    background-color: inherit;
-    border-radius: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  body {
-    max-width: 1140px;
-  }
-  .header {
-    padding: 2rem;
-  }
-}
-@media screen and (min-width: 1400px) {
-  body {
-    max-width: 1320px;
-  }
-  .header figure {
-    width: 24rem;
-  }
-  .header figure img {
-    width: 8rem;
-  }
 }

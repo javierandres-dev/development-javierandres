@@ -8,7 +8,6 @@ const $profession = d.getElementById('profession'),
   $i = d.getElementById('i'),
   $aboutMe = d.getElementById('aboutMe'),
   $me = d.getElementById('me'),
-  $contactMe = d.getElementById('contactMe'),
   $copyright = d.getElementById('copyright');
 
 d.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +29,5 @@ const setTexts = async () => {
   $i.textContent = texts.i;
   $aboutMe.textContent = texts.aboutMe;
   $me.innerHTML = html;
-  $contactMe.textContent = texts.contactMe;
   $copyright.textContent = texts.copyright;
 };

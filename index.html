@@ -30,55 +30,71 @@
     <title>javierandres.dev</title>
   </head>
   <body>
-    <h1>Javier Andrés Garzón Patarroyo</h1>
-    <header>
+    <h1 class="title">Javier Andrés Garzón Patarroyo</h1>
+    <header class="container-fluid header">
       <a href="/">
-        <figure>
-          <img src="./img/jaDevDark.svg" alt="Javier Andrés" />
-          <figcaption>javierandres.dev</figcaption>
+        <figure class="brand">
+          <img
+            src="./img/logo-dark.svg"
+            alt="javierandres.dev"
+            class="brand-logo"
+          />
+          <figcaption class="brand-name">
+            javierandres.<span>dev</span>
+          </figcaption>
         </figure>
       </a>
-      <div style="width: 2rem; height: 2rem; background-color: pink"></div>
+      <div class="toggle-theme"><input type="checkbox" name="" id="" /></div>
     </header>
-    <main role="main">
-      <figure>
-        <img src="./img/developer.jpg" alt="software developer" />
-        <figcaption>Javier Andrés</figcaption>
+    <main role="main" class="container main">
+      <figure class="person">
+        <img
+          src="./img/developer.jpg"
+          alt="software developer"
+          class="person-picture"
+        />
+        <figcaption class="person-name">Javier Andrés</figcaption>
       </figure>
-      <section>
-        <h2 id="profession"></h2>
-        <h3>
-          <span id="greet"></span>&nbsp;Javier Andrés.&nbsp;&nbsp;<span
-            id="i"
-          ></span>
+      <section class="overview">
+        <h2 id="profession" class="subtitle"></h2>
+        <h3 class="heading">
+          <span id="greet"></span>&nbsp;Javier Andrés,&nbsp;<span id="i"></span>
         </h3>
       </section>
     </main>
-    <nav>
-      <a href="#">
-        <figure><img src="./img/email.svg" alt="email" /></figure> </a
-      ><a href="#">
-        <figure><img src="./img/call.svg" alt="call" /></figure> </a
-      ><a href="#">
-        <figure><img src="./img/linkedin.svg" alt="linkedin" /></figure> </a
-      ><a href="#">
-        <figure><img src="./img/github.svg" alt="github" /></figure> </a
-      ><a href="#">
-        <figure><img src="./img/whatsapp.svg" alt="whatsapp" /></figure>
-      </a>
-    </nav>
-    <aside>
-      <details>
-        <summary id="aboutMe"></summary>
+    <aside class="container">
+      <details class="details">
+        <summary id="aboutMe" class="summary"></summary>
         <article id="me"></article>
       </details>
     </aside>
-    <footer>
-      <p id="contactMe"></p>
+    <nav class="nav">
+      <a href="#">
+        <figure class="icon">
+          <img src="./img/email.svg" alt="email" class="icon-email" />
+        </figure> </a
+      ><a href="#">
+        <figure class="icon">
+          <img src="./img/call.svg" alt="call" class="icon-call" />
+        </figure> </a
+      ><a href="#">
+        <figure class="icon">
+          <img src="./img/linkedin.svg" alt="linkedin" class="icon-linkedin" />
+        </figure> </a
+      ><a href="#">
+        <figure class="icon">
+          <img src="./img/github.svg" alt="github" class="icon-github" />
+        </figure> </a
+      ><a href="#">
+        <figure class="icon">
+          <img src="./img/whatsapp.svg" alt="whatsapp" class="icon-whatsapp" />
+        </figure>
+      </a>
+    </nav>
+    <footer class="container-fluid footer">
       <p>
-        <small
-          >Copyright © 2021 Javier Andrés Garzón Patarroyo.&nbsp;&nbsp;
-          <span id="copyright"></span
+        <small class="foot"
+          >Copyright © 2022&nbsp;&nbsp;<span id="copyright"></span
         ></small>
       </p>
     </footer>
