@@ -20,23 +20,6 @@
     <meta name="copyright" content="Javier Andrés Garzón Patarroyo" />
     <meta name="author" content="Javier Andrés Garzón Patarroyo" />
     <meta name="web_author" content="https://javierandres.dev" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
     <link rel="preload" href="./css/normalize.css" as="style" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="preload" href="./css/index.css" as="style" />
@@ -57,22 +40,49 @@
       </a>
       <div style="width: 2rem; height: 2rem; background-color: pink"></div>
     </header>
-    <nav>... nav ...</nav>
-    <main role="main">... main ...</main>
-    <aside>... aside ...</aside>
+    <main role="main">
+      <figure>
+        <img src="./img/developer.jpg" alt="software developer" />
+        <figcaption>Javier Andrés</figcaption>
+      </figure>
+      <section>
+        <h2 id="profession"></h2>
+        <h3>
+          <span id="greet"></span>&nbsp;Javier Andrés.&nbsp;&nbsp;<span
+            id="i"
+          ></span>
+        </h3>
+      </section>
+    </main>
+    <nav>
+      <a href="#">
+        <figure><img src="./img/email.svg" alt="email" /></figure> </a
+      ><a href="#">
+        <figure><img src="./img/call.svg" alt="call" /></figure> </a
+      ><a href="#">
+        <figure><img src="./img/linkedin.svg" alt="linkedin" /></figure> </a
+      ><a href="#">
+        <figure><img src="./img/github.svg" alt="github" /></figure> </a
+      ><a href="#">
+        <figure><img src="./img/whatsapp.svg" alt="whatsapp" /></figure>
+      </a>
+    </nav>
+    <aside>
+      <details>
+        <summary id="aboutMe"></summary>
+        <article id="me"></article>
+      </details>
+    </aside>
     <footer>
       <p id="contactMe"></p>
       <p>
-        📱 +57 300 560 0756 📭 info
-        <img src="./img/icon-at_sign.svg" alt="at sign" /> javierandres.dev
-      </p>
-      <p>
         <small
-          >Copyright © 2021 Javier Andrés Garzón Patarroyo. <span id=""></span
+          >Copyright © 2021 Javier Andrés Garzón Patarroyo.&nbsp;&nbsp;
+          <span id="copyright"></span
         ></small>
       </p>
     </footer>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/index.js"></script>
     <noscript>
       My page requires the use of JavaScript for its operation.&nbsp;&nbsp;If
       you have intentionally disabled it, please re-enable it.

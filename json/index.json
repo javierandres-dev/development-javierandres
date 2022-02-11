@@ -1,4 +1,36 @@
 {
-  "en": {},
-  "es": {}
+  "en": {
+    "profession": "software developer",
+    "greet": "Hello, I'm",
+    "i": "I'm a software developer oriented to web development, focus on JavaScript.",
+    "aboutMe": "About me",
+    "me": [
+      "I'm an autodidact software programmer.",
+      "In 1994 I obtained my first formal job in the company 'Team Computer', there I learned to assemble computers and install software.",
+      "In 2002 I decided to work independently marketing software and hardware and giving technical support to my clients, I did it until 2019.",
+      "In September 2019, I decided to quit my job to focus on learning to code.",
+      "In 2019 I joined to the school of computer science and software development 'Holberton School' I started the 'Software Foundations' program which I completed on June 2020, then I started the specialization in 'Full-Stack Web Development' that I finished on May 2021.",
+      "In April of 2021 I got my first job as software developer.",
+      "During this time I have been part of some software development teams and I have collaborated on projects using different languages like 'C', 'Python', 'SQL', 'Java' and 'JavaScript'; Using technologies like 'Git', 'Docker', 'ReactJS', 'NodeJS', 'TypeScript',  among others."
+    ],
+    "contactMe": "Found a bug or have an idea? Contact me.",
+    "copyright": "All right reserved."
+  },
+  "es": {
+    "profession": "desarrollador de software",
+    "greet": "Hola, Soy",
+    "i": "Soy un desarrollador de software orientado al desarrollo web, mi especialidad es JavaScript.",
+    "aboutMe": "Acerca de mí",
+    "me": [
+      "Soy un programador de software autodidacta.",
+      "En 1994 Obtuve mi primer trabajo formal en la empresa 'Team Computer', ahí aprendí a ensamblar computadores y a instalar software.",
+      "En 2002 decidí trabajar de manera independiente comercializando software, hardware y brindando soporte técnico a mis clientes, lo hice hasta 2019.",
+      "En 2019, decidí dejar mi trabajo y toda actividad para enfocarme en aprender desarrollo de software.",
+      "En Septiembre de 2019 me uní a la escuela de ciencias de la computación y desarrollo de software 'Holberton School' e inicié el programa 'Fundamentos de Software' el cual completé en Junio de 2020, enseguida inicié la especialización en 'Desarrollo Web Full-Stack' la cual completé en Mayo de 2021.",
+      "En Abril de 2021 obtuve mi primer empleo como desarrollador de software.",
+      "Durante este tiempo he integrado equipos de desarrollo de software y colaborado en proyectos usando diferentes lenguajes como 'C', 'Python', 'SQL', 'Java', y 'JavaScript'; haciendo uso de tecnologías como 'Git', 'Docker', 'ReactJS', 'NodeJS', 'TypeScript',  entre otras."
+    ],
+    "contactMe": "Encontró un error o tiene una idea? Contácteme.",
+    "copyright": "Reservados todos los derechos."
+  }
 }

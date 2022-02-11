@@ -1,19 +1,19 @@
 /* SUMMARY
-  0. Custom properties
-  1. Base
-  2. Globals
-  3. Helpers
-  4. Header
-  5. Theme button
-  6. Menu button
-  7. Navigation bar
-  8. Home
-  9. Portfolio
-  10. About
-  11. Footer
-  12. Media queries
+  0. Imports
+  1. Custom properties
+  2. Heading first level
+  3. Header
+  4. Main
+  5. Nav
+  6. Aside
+  7. Footer
+  8. Classes
+  9. Media queries
 
-  0. CUSTOM PROPERTIES
+  0. IMPORTS
+  ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;400;700&display=swap');
+/* 1. CUSTOM PROPERTIES
   ============================= */
 :root {
   --c-black: #080808;
@@ -22,12 +22,11 @@
   --c-light: #d8d8d8;
   --c-primary: #0078d7;
   --c-highlight: #00a1f1;
-  --ff-base: 'Raleway', sans-serif;
-  --fw-light: 200;
+  --ff-base: 'Noto Sans Display', sans-serif;
+  --fw-light: 100;
   --fw-base: 400;
-  --fw-bold: 600;
-  --fs-xl: 2.4rem;
-  --fs-l: 2rem;
+  --fw-bold: 700;
+  --fs-l: 1.8rem;
   --fs-base: 1.6rem;
   --fs-s: 1.3rem;
   --fs-xs: 1rem;
@@ -59,14 +58,14 @@ h1 {
   font-size: 1px;
 }
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-size: var(--fs-l);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-base);
   text-align: center;
   text-transform: capitalize;
+}
+small {
+  font-size: var(--fs-xs);
 }
 img {
   max-width: 100%;
@@ -126,6 +125,14 @@ header figure img {
 }
 header figure figcaption {
 }
+
+main figure {
+  width: 16rem;
+}
+main figure figcaption {
+  font-size: var(--fs-s);
+}
+
 /* 5. THEME BUTTON
   ============================= */
 .btn-theme {
