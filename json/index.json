@@ -12,7 +12,8 @@
       "I'm currently working for an excellent company.",
       "Found a bug or have an idea? Contact me."
     ],
-    "copyright": "All right reserved."
+    "copyright": "All right reserved.",
+    "lang": "en"
   },
   "es": {
     "profession": "Desarrollador de software",
@@ -27,6 +28,7 @@
       "Actualmente trabajo para una excelente compañía.",
       "¿Encontró un error o tiene una idea? Contácteme."
     ],
-    "copyright": "Reservados todos los derechos."
+    "copyright": "Reservados todos los derechos.",
+    "lang": "es"
   }
 }

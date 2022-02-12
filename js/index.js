@@ -1,9 +1,14 @@
 'use strict';
 const lang = window.navigator.language,
   d = window.document;
-let texts = null;
+let allTexts = null,
+  texts = null;
 
-const $profession = d.getElementById('profession'),
+const $lang = d.getElementById('lang'),
+  $toggleLang = d.getElementById('toggleLang'),
+  $theme = d.getElementById('theme'),
+  $toggleTheme = d.getElementById('toggleTheme'),
+  $profession = d.getElementById('profession'),
   $greet = d.getElementById('greet'),
   $i = d.getElementById('i'),
   $aboutMe = d.getElementById('aboutMe'),
@@ -11,13 +16,19 @@ const $profession = d.getElementById('profession'),
   $copyright = d.getElementById('copyright');
 
 d.addEventListener('DOMContentLoaded', () => {
-  setTexts();
+  setContents();
+  eventListeners();
 });
 
-const setTexts = async () => {
-  let res = await fetch('../json/index.json');
-  res = await res.json();
-  lang.startsWith('es') ? (texts = res.es) : (texts = res.en);
+const setContents = async () => {
+  const res = await fetch('../json/index.json');
+  allTexts = await res.json();
+
+  lang.startsWith('es') ? (texts = allTexts.es) : (texts = allTexts.en);
+
+  const theme = localStorage.getItem('key');
+
+  $theme.textContent = theme === 'dark' ? '🌙' : '☀️';
 
   let html = '';
   const last = texts.me.length - 1;
@@ -26,10 +37,25 @@ const setTexts = async () => {
     else html += `<p>${item}</p>`;
   });
 
+  $lang.innerHTML = `<img src="./img/flag-${texts.lang}.png" alt="flag">`;
   $profession.textContent = texts.profession;
   $greet.textContent = texts.greet;
   $i.textContent = texts.i;
   $aboutMe.textContent = texts.aboutMe;
   $me.innerHTML = html;
   $copyright.textContent = texts.copyright;
+};
+
+const eventListeners = () => {
+  $toggleLang.addEventListener('click', handleLang);
+  $toggleTheme.addEventListener('click', handleTheme);
+};
+
+const handleLang = async () => {
+  texts.lang === 'es' ? (texts = allTexts.en) : (texts = allTexts.es);
+  console.log('toggle lang...');
+};
+
+const handleTheme = () => {
+  console.log('toggle theme...');
 };
