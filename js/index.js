@@ -2,12 +2,13 @@
 const lang = window.navigator.language,
   d = window.document;
 let allTexts = null,
-  texts = null;
+  texts = null,
+  theme = 'light';
 
-const $lang = d.getElementById('lang'),
-  $toggleLang = d.getElementById('toggleLang'),
-  $theme = d.getElementById('theme'),
-  $toggleTheme = d.getElementById('toggleTheme'),
+const $body = d.querySelector('body'),
+  $logo = d.getElementById('logo'),
+  $btnLang = d.getElementById('btnLang'),
+  $btnTheme = d.getElementById('btnTheme'),
   $profession = d.getElementById('profession'),
   $greet = d.getElementById('greet'),
   $i = d.getElementById('i'),
@@ -16,20 +17,11 @@ const $lang = d.getElementById('lang'),
   $copyright = d.getElementById('copyright');
 
 d.addEventListener('DOMContentLoaded', () => {
-  setContents();
+  setInitialContents();
   eventListeners();
 });
 
-const setContents = async () => {
-  const res = await fetch('../json/index.json');
-  allTexts = await res.json();
-
-  lang.startsWith('es') ? (texts = allTexts.es) : (texts = allTexts.en);
-
-  const theme = localStorage.getItem('key');
-
-  $theme.textContent = theme === 'dark' ? '🌙' : '☀️';
-
+const setContents = () => {
   let html = '';
   const last = texts.me.length - 1;
   texts.me.forEach((item, i) => {
@@ -37,7 +29,9 @@ const setContents = async () => {
     else html += `<p>${item}</p>`;
   });
 
-  $lang.innerHTML = `<img src="./img/flag-${texts.lang}.png" alt="flag">`;
+  $logo.setAttribute('src', './img/logo-dark.svg');
+  $btnLang.innerHTML = `<img src="./img/flag-${texts.lang}.png" alt="flag">`;
+  $btnTheme.textContent = theme === 'light' ? '☀️' : '🌙';
   $profession.textContent = texts.profession;
   $greet.textContent = texts.greet;
   $i.textContent = texts.i;
@@ -46,16 +40,28 @@ const setContents = async () => {
   $copyright.textContent = texts.copyright;
 };
 
+const setInitialContents = async () => {
+  const res = await fetch('../json/index.json');
+  allTexts = await res.json();
+
+  lang.startsWith('es') ? (texts = allTexts.es) : (texts = allTexts.en);
+
+  setContents();
+};
+
 const eventListeners = () => {
-  $toggleLang.addEventListener('click', handleLang);
-  $toggleTheme.addEventListener('click', handleTheme);
+  $btnLang.addEventListener('click', toggleLang);
+  $btnTheme.addEventListener('click', toggleTheme);
 };
 
-const handleLang = async () => {
+const toggleLang = async () => {
   texts.lang === 'es' ? (texts = allTexts.en) : (texts = allTexts.es);
-  console.log('toggle lang...');
+  setContents();
 };
 
-const handleTheme = () => {
-  console.log('toggle theme...');
+const toggleTheme = () => {
+  theme === 'light' ? (theme = 'dark') : (theme = 'light');
+  $btnTheme.textContent = theme === 'light' ? '☀️' : '🌙';
+  $body.classList.toggle('dark');
+  $logo.setAttribute('src', `./img/logo-${theme}.svg`);
 };
