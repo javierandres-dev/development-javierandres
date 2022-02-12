@@ -20,8 +20,10 @@ const setTexts = async () => {
   lang.startsWith('es') ? (texts = res.es) : (texts = res.en);
 
   let html = '';
-  texts.me.forEach((item) => {
-    html += `<p>${item}</p>`;
+  const last = texts.me.length - 1;
+  texts.me.forEach((item, i) => {
+    if (i === last) html += `<p class='details-last'>${item}</p>`;
+    else html += `<p>${item}</p>`;
   });
 
   $profession.textContent = texts.profession;

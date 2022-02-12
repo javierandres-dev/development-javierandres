@@ -8,9 +8,8 @@
   6. Header
   7. Main
   8. Aside
-  9. Nav
-  10. Footer
-  11. Media queries
+  9. Footer
+  10. Media queries
 
   0. IMPORTS
   ============================= */
@@ -127,7 +126,7 @@ a:active {
 /* 7. MAIN
 ============================= */
 .main {
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 0 2rem;
 }
 .person {
@@ -145,151 +144,77 @@ a:active {
 /* 8. ASIDE
   ============================= */
 .details {
-  padding: 0 2rem;
+  padding: 0 2rem 8rem;
   font-weight: var(--fw-light);
+}
+.details-last {
+  text-align: right;
+  font-size: var(--fs-s);
 }
 .summary {
   font-weight: var(--fw-bold);
   color: var(--c-primary);
 }
-/* 9. NAV
-  ============================= */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 2rem;
-  background-color: var(--c-white);
-}
-.icon {
-  margin: 0;
-  width: 6.4rem;
-  text-align: center;
-  padding: 1rem 0 0 0;
-}
-.icon-email {
-  width: 2rem;
-}
-.icon-call {
-  width: 2rem;
-}
-.icon-linkedin {
-  width: 2rem;
-}
-.icon-github {
-  width: 2rem;
-}
-.icon-whatsapp {
-  width: 2rem;
-}
-/* 10. FOOTER
+/* 9. FOOTER
   ============================= */
 .footer {
-  text-align: end;
-  font-size: var(--fs-s);
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 0;
   background-color: var(--c-white);
 }
-.footer p {
+.footer-nav {
+  width: 320px;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
   margin: 0;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem 0;
 }
-/*
-.home {
-  margin: 4rem auto;
-  text-align: center;
+.icon-email,
+.icon-call,
+.icon-linkedin,
+.icon-github,
+.icon-whatsapp {
+  width: 2rem;
 }
-.home figure {
-  width: 10rem;
-  margin: auto;
+.footer-copyright {
+  margin: 0;
+  padding-right: 2rem;
+  align-self: flex-end;
 }
-.home figure img {
-  border: thin solid var(--white);
-  border-radius: 50%;
-}
-.home figure figcaption {
-  font-weight: var(--fw-light);
-  font-size: var(--fs-xxs);
-  text-align: center;
-}
-.portfolio {
-  margin: 4rem auto;
-  text-align: center;
-}
-.portfolio figure {
-  width: 10rem;
-  margin: auto;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio figure img {
-  border: thin solid var(--white);
-  border-radius: 50%;
-}
-.portfolio figure figcaption {
-  font-weight: var(--fw-light);
-  font-size: var(--fs-xxs);
-  text-align: center;
-}
-.portfolio figure:hover {
-  opacity: 0.7;
-}
-.about {
-  margin: 4rem auto;
-}
-*/
-/* 12. MEDIA QUERIES
+/* 10. MEDIA QUERIES
   ============================= */
 @media screen and (min-width: 576px) {
   .container {
     max-width: 540px;
     margin: auto;
-    padding: 1rem 0;
   }
-  .home figure figcaption {
-    font-size: var(--fs-xs);
+  .main {
+    margin-top: 3.2rem;
   }
-  .footer {
-    padding: 1rem;
-  }
-  .footer p {
-    font-size: var(--fs-s);
-  }
-  .footer small {
-    font-size: var(--fs-xs);
+  .footer-nav {
+    align-self: flex-end;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
   }
-  .header figure {
-    width: 22rem;
+  .main,
+  .details {
+    width: 540px;
+    margin: auto;
+    padding: 0;
   }
-  .header figure img {
-    width: 6rem;
+  .main {
+    display: flex;
   }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: var(--fs-xl);
-  }
-  .header {
-    padding: 1.5rem;
-  }
-  .home figure figcaption {
-    font-size: var(--fs-s);
-  }
-  .footer {
-    padding: 2rem;
-  }
-  .footer p {
-    font-size: var(--fs-base);
-  }
-  .footer small {
-    font-size: var(--fs-s);
+  .person {
+    margin-right: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -335,21 +260,56 @@ a:active {
   .container {
     max-width: 1140px;
   }
-  .header {
-    padding: 2rem;
-  }
 }
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1320px;
   }
-  .header figure {
-    width: 24rem;
-  }
-  .header figure img {
-    width: 8rem;
-  }
 }
+
+/*
+.home {
+  margin: 4rem auto;
+  text-align: center;
+}
+.home figure {
+  width: 10rem;
+  margin: auto;
+}
+.home figure img {
+  border: thin solid var(--white);
+  border-radius: 50%;
+}
+.home figure figcaption {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-xxs);
+  text-align: center;
+}
+.portfolio {
+  margin: 4rem auto;
+  text-align: center;
+}
+.portfolio figure {
+  width: 10rem;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio figure img {
+  border: thin solid var(--white);
+  border-radius: 50%;
+}
+.portfolio figure figcaption {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-xxs);
+  text-align: center;
+}
+.portfolio figure:hover {
+  opacity: 0.7;
+}
+.about {
+  margin: 4rem auto;
+}
+*/
 /* ?. THEME
   ============================= */
 .light-mode {
