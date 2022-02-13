@@ -13,7 +13,8 @@
       "Found a bug or have an idea? Contact me."
     ],
     "copyright": "All right reserved.",
-    "lang": "en"
+    "lang": "en",
+    "oppositeLang": "es"
   },
   "es": {
     "profession": "Desarrollador de software",
@@ -29,6 +30,7 @@
       "¿Encontró un error o tiene una idea? Contácteme."
     ],
     "copyright": "Reservados todos los derechos.",
-    "lang": "es"
+    "lang": "es",
+    "oppositeLang": "en"
   }
 }

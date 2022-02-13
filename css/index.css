@@ -18,19 +18,18 @@
 /* 1. CUSTOM PROPERTIES
   ============================= */
 :root {
-  --c-black: #080808;
-  --c-white: #fdfdfd;
   --c-dark: #30363d;
-  --c-light: #d8d8d8;
+  --c-light: #fafafa;
   --c-primary: #0078d7;
   --c-highlight: #00a1f1;
   --ff-base: 'Noto Sans Display', sans-serif;
   --fw-light: 300;
   --fw-base: 400;
   --fw-bold: 500;
-  --fs-l: 1.8rem;
-  --fs-base: 1.6rem;
-  --fs-s: 1.3rem;
+  --fs-xl: 2rem;
+  --fs-l: 1.75rem;
+  --fs-base: 1.5rem;
+  --fs-s: 1.25rem;
   --fs-xs: 1rem;
 }
 /* 2. BASE
@@ -46,26 +45,16 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: var(--c-white);
-  color: var(--c-dark);
   font-family: var(--ff-base);
   font-size: var(--fs-base);
   font-weight: var(--fw-base);
   line-height: 1.6;
-}
-
-a {
-  color: var(--c-primary);
 }
 a:link {
   text-decoration: none;
 }
 a:visited {
   font-style: italic;
-}
-a:hover {
-  text-decoration: underline;
-  color: var(--c-highlight);
 }
 a:active {
   color: var(--c-highlight);
@@ -81,13 +70,13 @@ a:active {
 .d-none {
   display: none;
 }
-/* 4. HELADINGS
+/* 4. HEADINGS
   ============================= */
 .title {
   margin: 0;
   font-size: 1px;
   font-weight: var(--fw-light);
-  color: var(--c-white);
+  color: var(--c-light);
 }
 .subtitle {
   font-size: var(--fs-l);
@@ -121,8 +110,20 @@ a:active {
 .brand-name span {
   font-size: var(--fs-s);
 }
-.toggle-theme {
-  margin-right: 2rem;
+.btns {
+  margin-right: 1rem;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+}
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.btn-flag {
+  width: 2rem;
 }
 /* 7. MAIN
 ============================= */
@@ -137,6 +138,7 @@ a:active {
 }
 .person-picture {
   width: 8rem;
+  border-radius: 50%;
 }
 .person-name {
   font-size: var(--fs-s);
@@ -154,7 +156,17 @@ a:active {
 }
 .summary {
   font-weight: var(--fw-bold);
+  color: var(--c-highlight);
+}
+.summary:hover {
   color: var(--c-primary);
+  cursor: pointer;
+}
+.article {
+  border: 0.1rem solid var(--c-highlight);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
 }
 /* 9. FOOTER
   ============================= */
@@ -163,7 +175,8 @@ a:active {
   flex-direction: column;
   position: fixed;
   bottom: 0;
-  background-color: var(--c-white);
+  background-color: var(--c-light);
+  color: var(--c-dark);
 }
 .footer-nav {
   width: 320px;
@@ -171,16 +184,11 @@ a:active {
   display: flex;
   justify-content: space-between;
 }
-.icon {
+.nav-icon {
   margin: 0;
-  padding: 0.5rem 2rem 0;
-}
-.icon-email,
-.icon-call,
-.icon-linkedin,
-.icon-github,
-.icon-whatsapp {
-  width: 2rem;
+  text-align: center;
+  font-size: var(--fs-xl);
+  padding: 0 2rem;
 }
 .footer-copyright {
   margin: 0;
@@ -189,9 +197,27 @@ a:active {
 }
 /* 10. THEME
   ============================= */
+.light {
+  background-color: var(--c-light);
+  color: var(--c-dark);
+}
+.light a {
+  color: var(--c-primary);
+}
+.light a:hover {
+  text-decoration: underline;
+  color: var(--c-highlight);
+}
 .dark {
   background-color: var(--c-dark);
-  color: var(--c-white);
+  color: var(--c-light);
+}
+.dark a {
+  color: var(--c-highlight);
+}
+.dark a:hover {
+  text-decoration: underline;
+  color: var(--c-primary);
 }
 /* 11. MEDIA QUERIES
   ============================= */

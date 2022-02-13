@@ -27,9 +27,13 @@
     <link rel="icon" href="./img/favicon.jpg" type="image/jpg" />
     <link rel="icon" href="./img/favicon.png" type="image/png" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/d1d3d42cfb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>javierandres.dev</title>
   </head>
-  <body>
+  <body class="light">
     <h1 class="title">Javier Andrés Garzón Patarroyo</h1>
     <header class="container-fluid header">
       <a href="/">
@@ -41,8 +45,8 @@
         </figure>
       </a>
       <div class="btns">
-        <button id="btnLang"></button>
-        <button id="btnTheme"></button>
+        <button id="btnLang" class="btn"></button>
+        <button id="btnTheme" class="btn"></button>
       </div>
     </header>
     <main role="main" class="container main">
@@ -64,38 +68,46 @@
     <aside class="container">
       <details class="details">
         <summary id="aboutMe" class="summary"></summary>
-        <article id="me"></article>
+        <article id="me" class="article"></article>
       </details>
     </aside>
-    <footer class="container-fluid footer">
+    <footer class="container-fluid footer light">
       <nav class="footer-nav">
-        <a href="#">
-          <figure class="icon">
-            <img src="./img/email.svg" alt="email" class="icon-email" />
+        <a
+          href="mailto:info@javierandres.dev"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <figure class="nav-icon">
+            <i class="fa-solid fa-envelope"></i>
           </figure> </a
-        ><a href="#">
-          <figure class="icon">
-            <img src="./img/call.svg" alt="call" class="icon-call" />
+        ><a
+          href="https://linkedin.com/in/javierandresgp"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <figure class="nav-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
           </figure> </a
-        ><a href="#">
-          <figure class="icon">
-            <img
-              src="./img/linkedin.svg"
-              alt="linkedin"
-              class="icon-linkedin"
-            />
+        ><a
+          href="https://github.com/javierandresgp"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <figure class="nav-icon">
+            <i class="fa-brands fa-github"></i>
           </figure> </a
-        ><a href="#">
-          <figure class="icon">
-            <img src="./img/github.svg" alt="github" class="icon-github" />
+        ><a href="tel:+573005600756" target="_blank" rel="noreferrer noopener">
+          <figure class="nav-icon">
+            <i class="fa-solid fa-phone-volume"></i>
           </figure> </a
-        ><a href="#">
-          <figure class="icon">
-            <img
-              src="./img/whatsapp.svg"
-              alt="whatsapp"
-              class="icon-whatsapp"
-            />
+        ><a
+          href="https://api.whatsapp.com/send?phone=573005600756&text=..."
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <figure class="nav-icon">
+            <i class="fa-brands fa-whatsapp"></i>
           </figure>
         </a>
       </nav>
