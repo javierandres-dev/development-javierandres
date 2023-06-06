@@ -1,12 +1,7 @@
 # :octocat: development-javierandres
-- - -
-:copyright: Web page build with vanilla :icecream: :yum:  
-How does it look? Take a look at [https://javierandres.dev](https://javierandres.dev)
-## Stack
-* HTML
-* CSS
-* JavaScript
-* JSON
-- - -
+---
+> My web page `Deprecated`.
+---
 ## Software Developer
-[Javier Andrés Garzón Patarroyo](https://javierandres.dev)
+Built by [Javi](https://javierandres.dev) :copyright: 2022  
+Found a bug or have an idea? [Contact me](https://javierandres.dev).
